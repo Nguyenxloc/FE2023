@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./libs/angular.min.js"></script>
+</head>
+<!-- định nghĩa vùng sử dụng angularjs -->
+<!-- ng-app dùng để định nghĩa vùng sử dụng -->
+
+<body ng-app="myJS">
+    <div ng-controller="demoController">
+        <h1>{{xinchao}}</h1>
+    </div>
+    <div ng-controller="demoController1">
+        <h1>{{xinchao1}}</h1>
+        <h1 ng-bind="chuyennganh"></h1>
+        <table border="1" >
+            <tr>
+                <td>Tên</td>
+                <td>Năm sinh</td>
+                <td>Chuyên ngành</td>
+            </tr>
+            <tr ng-repeat="item in students">
+                <td>{{ item.ten }}</td>
+                <td>{{ item.namsinh }}</td>
+                <td>{{item.chuyennganh }}</td>
+            </tr>
+        </table>
+    </div>
+   
+</body>
+<!-- nhúng trực tiếp -->
+<script src="main.js">
+    
+</script>
+
+</html>
