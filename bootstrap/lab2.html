@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <!--để sử dụng được grid trong bootstaps bắt buộc nội dung phải chứa trong class row  -->
+        <!-- để tùy chỉnh độ rộng của các hàng ta thêm các chỉ số từ 1-12 sau col
+tổng các chỉ số trong một hàng phải bằng 12 -->
+
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                    type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i
+                        class="bi bi-pencil-square"></i>
+                    Cập nhật</button>
+                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                    type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><i
+                        class="bi bi-list-ul"></i>Danh sách</button>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+                tabindex="0">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="bi bi-pencil-square"></i>Nhập Lương Tháng 12
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6  ">
+                                <strong>Mã nhân viên</strong>
+                            </div>
+                            <div class="col-6  ">
+                                <strong>Họ và tên</strong>
+                            </div>
+                            <div class="col-6  ">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                            <div class="col-6  ">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                            <div class="col-6  ">
+                                <strong>Câu lạc bộ</strong>
+                            </div>
+                            <div class="col-6  ">
+                                <strong>Lương</strong>
+                            </div>
+                            <div class="col-6  ">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Đà nẵng</option>
+                                    <option value="1">Quảng Ninh</option>
+                                    <option value="2">Hải Phòng</option>
+                                    <option value="3">Quảng Ngãi</option>
+                                  </select>
+                            </div>
+                            <div class="col-6  ">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">$</span>
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <span class="input-group-text">.00</span>
+                                  </div>
+                            </div>
+                            <div class="col-6  ">
+                                <strong>Thưởng</strong>
+                            </div>
+                            <div class="col-6  ">
+                                <strong>Phụ cấp</strong>
+                            </div>
+                            <div class="col-6  ">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">$</span>
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <span class="input-group-text">.00</span>
+                                  </div>
+                            </div>
+                            <div class="col-6  ">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">$</span>
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <span class="input-group-text">.00</span>
+                                  </div>
+                            </div>
+
+                            <div class="col-12 ">
+                                <strong>Ghi chú</strong>
+                            </div>
+                            <div class="col-12  ">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="" aria-label="Username"
+                                        aria-describedby="basic-addon1" style="height:100px;">
+                                </div>
+                            </div>
+                            <div class="col-12  ">
+                                <button type="button" class="btn btn-outline-dark"><i class="bi bi-floppy2-fill"></i>
+                                    Lưu</button>
+                                <button type="button" class="btn btn-outline-dark"><i class="bi bi-x-square-fill"></i>
+                                    Hủy</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        Vui lòng nhập thông tin lương cầu thủ
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="bi bi-list-task"></i> BẢNG LƯƠNG THÁNG 12
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered" style="margin-top:-16px; margin-bottom: -16px;margin-left: -16px; width: 1295px;">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">MÃ NV</th>
+                                    <th rowspan="2">HỌ VÀ TÊN</th>
+                                    <th colspan="3">THU NHẬP</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">LƯƠNG</th>
+                                    <th scope="col">THƯỞNG</th>
+                                    <th scope="col">PHỤ CẤP</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>NV100</td>
+                                    <td>Nguyễn Công Phượng</td>
+                                    <td>5000000</td>
+                                    <td>500000</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>NV102</td>
+                                    <td>Phan Văn Tài Em</td>
+                                    <td>9000000</td>
+                                    <td>600000</td>
+                                    <td>100000</td>
+                                </tr>
+                                <tr>
+                                    <td>NV103</td>
+                                    <td>Lê Huỳnh Đức</td>
+                                    <td>7000000</td>
+                                    <td>300000</td>
+                                    <td>200000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-footer">
+                        Lương của cầu thủ và huấn luyện viên chuyên nghiệp
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
