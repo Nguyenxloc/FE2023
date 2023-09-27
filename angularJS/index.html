@@ -6,34 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./libs/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <!-- định nghĩa vùng sử dụng angularjs -->
 <!-- ng-app dùng để định nghĩa vùng sử dụng -->
 
 <body ng-app="myJS">
-    <div ng-controller="demoController">
-        <h1>{{xinchao}}</h1>
-    </div>
     <div ng-controller="demoController1">
-        <h1>{{xinchao1}}</h1>
-        <h1 ng-bind="chuyennganh"></h1>
-        <table border="1" >
+        <table border="1px" >
             <tr>
+                <td>Stt</td>
                 <td>Tên</td>
-                <td>Năm sinh</td>
-                <td>Chuyên ngành</td>
+                <td>Ngày sinh</td>
+                <td>Mức luong</td>
+                <td>Giới tính</td>
             </tr>
-            <tr ng-repeat="item in students">
-                <td>{{ item.ten }}</td>
-                <td>{{ item.namsinh }}</td>
-                <td>{{item.chuyennganh }}</td>
+            <tr ng-repeat="item in employee | limitTo:  limitNum">
+                <td class="counterCell"></td>
+                <td ng-click="sayHello(item.ten)">{{ item.ten }}</td>
+                <td ng-click="myFunc()" ng-mouseenter="myFunc(item.ngaysinh)">{{ item.ngaysinh| date:'dd/MM/yyyy' }}</td>
+                <td ng-click="sayHello({{ item.ten }})">{{item.mucluong|currency:'':0 }}</td>
+                <td ng-click="sayHello({{ item.ten }})">{{item.gioitinh==0 ?"Nam" : "Nữ" }}</td>
             </tr>
         </table>
+        <select class="form-select" aria-label="Default select example" ng-model="limitNum">
+            <option value="1" selected="selected">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        <h1>{{ten}}</h1>
+        <input type="text" ng-model="ten">
+        <button class="btn" ng-click="sayHello('loc')">click here</button>
+        <!-- hover(mouseenter) -->
+        <h3 ng-mouseenter="myFunc()"> mouse to here</h3>
     </div>
-   
 </body>
 <!-- nhúng trực tiếp -->
-<script src="main.js">
+<script src="libs/lesson6.js">
     
 </script>
 
