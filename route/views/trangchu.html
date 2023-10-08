@@ -1,3 +1,67 @@
 <div>
-<h1>this is new content</h1>
+    <h1>add new content</h1>
+    <h2>Thêm mới thông tin</h2>
+    <form ng-submit="addNew()">
+        <label for="">Name</label>
+        <input type="text" ng-model="inputValue.name">
+        <br>
+        <label for="" class="form-label">Address:</label>
+        <input type="text"ng-model="inputValue.address">
+        <button type="submit"class="btn btn-success mt-3">Thêm mới</button>
+    </form>
+    <br>
+    <form ng-submit="cal()">
+        <label for="">First number: </label>
+        <input type="text" ng-model="inputNum.num1">
+        <br>
+        <label for="" class="form-label">Second number: </label>
+        <input type="text"ng-model="inputNum.num2">
+        <br>
+        <label for="" class="form-label">Sum: </label>
+        <input type="text"ng-model="sum">
+        <button type="submit"class="btn btn-success mt-3">Kết quả</button>
+    </form>
+
+    <form ng-submit="signUp()">
+        <label for="">UserName: </label>
+        <input type="text" ng-model="user.userName">
+        <br>
+        <label for="" class="form-label">Pass: </label>
+        <input type="password"ng-model="user.pass">
+        <br>
+        <button type="submit"class="btn btn-success mt-3">Đăng nhập</button>
+        <p ng-show="mes">{{mes}}</p>
+    </form>
+    <button type="submit"class="btn btn-success mt-3" ng-click="countNum()">Click</button>
+
+
+    <h1>Danh sách sinh viên 2</h1>
+    
+        <table border="1">
+            <tr>
+                <td>Tên</td>
+                <td>Năm Sinh</td>
+                <td>Chuyên ngành</td>
+            </tr>
+            <tr ng-repeat="item in students">
+                <td>{{ item.ten }}</td>
+                <td>{{ item.namsinh }}</td>
+                <td>{{ item.chuyennganh }}</td>
+            </tr>
+        </table>
+
+        <form ng-submit="addStudent()">
+            <label for="">Name: </label>
+            <input type="text" ng-model="students.Name">
+            <br>
+            <label for="" class="form-label">DOB: </label>
+            <input type="password"ng-model="students.DOB">
+            <br>
+            <label for="" class="form-label">Chuyên ngành: </label>
+            <input type="password"ng-model="students.field">
+            <br>
+            <button type="submit"class="btn btn-success mt-3">Đăng nhập</button>
+            <p ng-show="mes">{{mes}}</p>
+        </form>
+
 </div>

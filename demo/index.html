@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <script src="libs/angular.min.js"></script>
+    <script src="libs/angular-route.min.js"></script>
+</head>
+<body ng-app="appRoute">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#!/trang-chu">Trang chủ</a>
+                        <a class="nav-link" href="#">Giới thiệu</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main ng-view>the content</main>
+    <footer class="bg-danger">This is footer</footer>
+</body>
+<script src="controllers/TrangChuController.js"></script>
+<script>
+    let myApp  = angular.module('appRoute', ['ngRoute']);
+    myApp.config(function($routeProvider){
+        //config(): cau hinh cac tham so trc khi khoi tao chuong trinh
+        //Tham so provider la mac dinh k thay doi
+        $routeProvider
+            .when(
+                '/trang-chu',// Ten route
+                {
+                    templateUrl:'views/trangchu.html',//Đường dẫn tương đối đến view
+                    controller: TrangChuController
+                }
+            )
+            .otherwise(
+                //trong trường hợp người dùng yêu cầu 1 đường dẫn không có nó sẽ tự động chuyển
+                //hướng về router dưới
+                {
+                    redirectTo: '/trang-chu',
+                }
+            )
+    });
+</script>
+</html>
